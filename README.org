@@ -1,11 +1,11 @@
 #+TITLE: clojure-utils
 
-* Description
 Sadly, much of the existing Clojure ecosystem provides its utilities
 only as Leiningen plugins.  This repository attempts to wrap popular
-Clojure utilities in a nix flake.
+Clojure utilities in a nix flake.  For more information about nix
+flakes, please refer to the [[https://nixos.wiki/wiki/Flakes][NixOS Wiki entry on flakes]].
 
-** =cljfmt=
+* =cljfmt=
 [[https://github.com/weavejester/cljfmt][cljfmt]] is a "tool for formatting Clojure code idiomatically".
 =clojure-utils= provides a wrapped version that can be used to format
 your code using =nix=:
@@ -18,3 +18,20 @@ your code using =nix=:
 
 Pass any arguments after the =--= that you would pass to `cljfmt`.
 Please refer to it's [[https://github.com/weavejester/cljfmt#usage][documentation]].
+* Goals
+The goal for this project is to wrap many of the useful Clojure
+utilities as standalone applications.  For some strange reason, many
+applications are only available as Leiningen plugins.  Since the
+community is [[https://clojure.org/news/2022/06/02/state-of-clojure-2022#_working_with_clojure][slowly moving to other tooling]], it becomes clear that
+these plugins must be available as standalone applications.
+
+The current goal is to implement standalone versions of
+
+- [x] =cljfmt=
+- [ ] =clj-kondo=
+- [ ] ...
+* License
+Copyright © 2022 Marco Schneider
+
+Distributed under the Eclipse Public License either version 1.0 or (at
+your option) any later .
