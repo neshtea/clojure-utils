@@ -24,5 +24,14 @@
             buildCommand = "clojure -T:build uber";
           };
         };
+
+        apps = {
+          cljfmt = {
+            type = "app";
+            program =
+              "${self.packages.${system}.cljfmtWrapped}/bin/cljfmt-wrapped";
+          };
+        };
       });
+
 }
