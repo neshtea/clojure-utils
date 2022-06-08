@@ -5,7 +5,7 @@ Sadly, much of the existing Clojure ecosystem provides its utilities
 only as Leiningen plugins.  This repository attempts to wrap popular
 Clojure utilities in a nix flake.
 
-* : =cljfmt=
+** =cljfmt=
 [[https://github.com/weavejester/cljfmt][cljfmt]] is a "tool for formatting Clojure code idiomatically".
 =clojure-utils= provides a wrapped version that can be used to format
 your code using =nix=:
