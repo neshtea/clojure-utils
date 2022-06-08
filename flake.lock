@@ -20,22 +20,6 @@
         "type": "github"
       }
     },
-    "cljfmt": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1652452813,
-        "narHash": "sha256-3ZkHIdN2DJ5ybYjm1lGnmvhhcVvZttNua+u9zIRICDo=",
-        "owner": "weavejester",
-        "repo": "cljfmt",
-        "rev": "066be05a7e7be963360af0f33a68719e01ddb329",
-        "type": "github"
-      },
-      "original": {
-        "owner": "weavejester",
-        "repo": "cljfmt",
-        "type": "github"
-      }
-    },
     "devshell": {
       "inputs": {
         "flake-utils": "flake-utils",
@@ -138,7 +122,6 @@
     "root": {
       "inputs": {
         "clj-nix": "clj-nix",
-        "cljfmt": "cljfmt",
         "flake-utils": "flake-utils_3",
         "nixpkgs": "nixpkgs_2"
       }

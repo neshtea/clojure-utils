@@ -17,7 +17,6 @@
         # - kondo (linter)
         # - cljfmt (formatter)
         packages = {
-
           cljfmtWrapped = cljnix.mkCljBin {
             name = "cljfmt-wrapped";
             main-ns = "cljfmt-wrapped.main";
