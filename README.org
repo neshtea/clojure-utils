@@ -1,0 +1,20 @@
+#+TITLE: clojure-utils
+
+* Description
+Sadly, much of the existing Clojure ecosystem provides its utilities
+only as Leiningen plugins.  This repository attempts to wrap popular
+Clojure utilities in a nix flake.
+
+* : =cljfmt=
+[[https://github.com/weavejester/cljfmt][cljfmt]] is a "tool for formatting Clojure code idiomatically".
+=clojure-utils= provides a wrapped version that can be used to format
+your code using =nix=:
+#+begin_src shell
+  # Check the formatting of the code under <path-to-source>
+  $ nix run github:neshtea/clojure-utils#cljfmt -- check <path-to-source>
+  # Fix formatting of the code under <path-to-source>
+  $ nix run github:neshtea/clojure-utils#cljfmt -- fix <path-to-source>
+#+end_src
+
+Pass any arguments after the =--= that you would pass to `cljfmt`.
+Please refer to it's [[https://github.com/weavejester/cljfmt#usage][documentation]].
