@@ -1,0 +1,15 @@
+{:deps
+ {cljfmt/cljfmt {:mvn/version "0.8.0"}}
+
+ :paths
+ ["src"]
+
+ :aliases
+ {:build
+
+  {:deps
+   {io.github.clojure/tools.build
+    {:git/tag "v0.8.2"
+     :git/sha "ba1a2bf421838802e7bdefc541b41f57582e53b6"}}
+   :ns-default
+   build}}}
