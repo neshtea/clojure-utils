@@ -17,8 +17,8 @@
         # - kondo (linter)
         # - cljfmt (formatter)
         packages = {
-          cljfmtWrapped = cljnix.mkCljBin {
-            name = "cljfmt-wrapped";
+          cljfmt = cljnix.mkCljBin {
+            name = "cljfmt";
             main-ns = "cljfmt-wrapped.main";
             projectSrc = ./cljfmt-wrapped;
             buildCommand = "clojure -T:build uber";
@@ -28,8 +28,7 @@
         apps = {
           cljfmt = {
             type = "app";
-            program =
-              "${self.packages.${system}.cljfmtWrapped}/bin/cljfmt-wrapped";
+            program = "${self.packages.${system}.cljfmt}/bin/cljfmt";
           };
         };
       });
